@@ -7,6 +7,7 @@
 //   node scripts/render.js --fps 15 --workers 3 --out build/preview.mp4
 //   node scripts/render.js --from 18 --to 34    render a section (seconds)
 //   node scripts/render.js --mux-only           re-mux new audio onto the last rendered frames
+//   node scripts/render.js --page explainer     render the animated explainer (explainer/)
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
@@ -19,19 +20,23 @@ const arg = (name, def) => {
   const i = process.argv.indexOf('--' + name);
   return i > 0 ? process.argv[i + 1] : def;
 };
+const pageName = arg('page', 'video');
+const EXPLAINER = pageName === 'explainer';
 const fps = parseFloat(arg('fps', FPS));
 const workers = parseInt(arg('workers', Math.max(1, Math.min(4, os.cpus().length - 1))), 10);
 const from = parseFloat(arg('from', 0));
-const END = DURATION + 1.5; // let the last chord ring over black
+const END = EXPLAINER
+  ? JSON.parse(fs.readFileSync(path.join(ROOT, 'explainer', 'timing.json'), 'utf8')).duration
+  : DURATION + 1.5; // let the last chord ring over black
 const to = Math.min(parseFloat(arg('to', END)), END);
-const out = path.resolve(ROOT, arg('out', 'out/one-man-farm.mp4'));
-const crf = arg('crf', '17');
+const out = path.resolve(ROOT, arg('out', EXPLAINER ? 'out/one-man-farm-explainer.mp4' : 'out/one-man-farm.mp4'));
+const crf = arg('crf', EXPLAINER ? '21' : '17');
 const quality = parseInt(arg('jpeg', '94'), 10);
 const muxOnly = process.argv.includes('--mux-only');
 
 const f0 = Math.round(from * fps), f1 = Math.round(to * fps);
 const total = f1 - f0;
-const segDir = path.join(ROOT, 'build', 'segments');
+const segDir = path.join(ROOT, 'build', EXPLAINER ? 'segments-explainer' : 'segments');
 const video = path.join(segDir, 'video.mp4');
 if (!muxOnly) {
   fs.rmSync(segDir, { recursive: true, force: true });
@@ -42,10 +47,10 @@ if (!muxOnly) {
 }
 fs.mkdirSync(path.dirname(out), { recursive: true });
 
-const wav = path.join(ROOT, 'build', 'soundtrack.wav');
+const wav = path.join(ROOT, 'build', EXPLAINER ? 'explainer-soundtrack.wav' : 'soundtrack.wav');
 if (!fs.existsSync(wav)) {
   console.log('soundtrack missing → generating');
-  spawnSync(process.execPath, [path.join(ROOT, 'scripts', 'audio.js')], { stdio: 'inherit' });
+  spawnSync(process.execPath, [path.join(ROOT, 'scripts', EXPLAINER ? 'explainer-audio.js' : 'audio.js')], { stdio: 'inherit' });
 }
 
 if (!muxOnly) await renderFrames();
@@ -66,7 +71,8 @@ async function renderFrames() {
   async function worker(k, a, b) {
     const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
     page.on('pageerror', (e) => console.error(`\n[worker ${k}] page error:`, e.message));
-    await page.goto(`${srv.url}/video/index.html`);
+    await page.goto(`${srv.url}/${EXPLAINER ? 'explainer' : 'video'}/index.html`);
+    await page.waitForFunction(() => window.__ready);
     await page.evaluate(() => window.__ready);
     const cdp = await page.context().newCDPSession(page);
     const seg = path.join(segDir, `seg-${String(k).padStart(2, '0')}.mp4`);

@@ -1,0 +1,58 @@
+{
+  "voice": "af_heart",
+  "speed": 0.97,
+  "gap": 0.42,
+  "scenes": [
+    { "id": "open", "lead": 3.4, "tail": 1.0, "lines": [
+      { "id": "o1", "text": "This is a farm on Great Nicobar, the southernmost island of India." },
+      { "id": "o2", "text": "Like most farms, it runs on people. Planting, weeding, spraying, picking and carrying. Every day, by hand." }
+    ]},
+    { "id": "idea", "lead": 0.8, "tail": 1.2, "lines": [
+      { "id": "i1", "text": "Our long-term vision is something we call the One-Man Farm." },
+      { "id": "i2", "text": "It doesn't mean one person does every job. It means that human physical labour largely disappears." },
+      { "id": "i3", "text": "A small team supervises. Machines do the work." }
+    ]},
+    { "id": "water", "lead": 0.8, "tail": 0.9, "lines": [
+      { "id": "w1", "text": "Some of this is already within reach. Drip lines deliver water to every plant, and nutrients travel through the same pipes." },
+      { "id": "w2", "text": "With sensors, automated valves and software, irrigation can run almost on its own." }
+    ]},
+    { "id": "harvest", "lead": 0.8, "tail": 0.6, "lines": [
+      { "id": "h1", "text": "Harvesting is much harder." },
+      { "id": "h2", "text": "A machine has to find a ripe vegetable inside dense leaves, reach it without damaging the plant, cut it cleanly, and handle it without bruising." }
+    ]},
+    { "id": "crops", "lead": 0.3, "tail": 1.0, "lines": [
+      { "id": "h3", "text": "And cucumber, okra, chilli, bitter gourd and papaya may each need a different design." }
+    ]},
+    { "id": "spray", "lead": 0.8, "tail": 1.0, "lines": [
+      { "id": "s1", "text": "Drones have made spraying easier. But on dense, trellised crops, pests hide under the leaves, where spray from above can't reach." },
+      { "id": "s2", "text": "So another machine moves beneath the canopy, spots the pests with a camera, and sprays only where it's needed." }
+    ]},
+    { "id": "eco", "lead": 0.8, "tail": 1.2, "lines": [
+      { "id": "e1", "text": "Weeding, pruning, training vines, inspecting plants, moving produce. Not one giant machine, but an ecosystem of specialised ones." }
+    ]},
+    { "id": "small", "lead": 0.8, "tail": 1.4, "lines": [
+      { "id": "m1", "text": "Most farm machinery was built for vast, flat fields." },
+      { "id": "m2", "text": "Farms here are three, five or ten acres. Irregular, hilly, with narrow tracks and trellises." },
+      { "id": "m3", "text": "So our machines must be small, light and modular. The question is simple: how do we bring industrial productivity to a five-acre farm?" }
+    ]},
+    { "id": "data", "lead": 0.8, "tail": 1.0, "lines": [
+      { "id": "d1", "text": "Every machine also collects data. The harvester measures every fruit. The sprayer maps every pest. The irrigation system logs every drop." },
+      { "id": "d2", "text": "Season after season, the farm builds a memory, linking what was done to the crop with what happened to it." }
+    ]},
+    { "id": "ai", "lead": 0.6, "tail": 1.1, "lines": [
+      { "id": "a1", "text": "On top of that memory, AI can coordinate the whole farm: what is growing where, which plants are struggling, when to harvest, and what to do next." }
+    ]},
+    { "id": "seed", "lead": 0.8, "tail": 1.2, "lines": [
+      { "id": "g1", "text": "That data could even shape the seed. Today, crop varieties are bred for broad regions." },
+      { "id": "g2", "text": "In future, a variety could be developed for one farm and its exact conditions, much like personalised medicine." }
+    ]},
+    { "id": "scale", "lead": 0.8, "tail": 1.0, "lines": [
+      { "id": "p1", "text": "And if this works on small farms like ours, it can work on millions of others." },
+      { "id": "p2", "text": "Every labour problem becomes an engineering problem. Every solution becomes a product." }
+    ]},
+    { "id": "end", "lead": 1.0, "tail": 5.5, "lines": [
+      { "id": "n1", "text": "Machines do the work. Sensors observe. Data remembers. AI coordinates." },
+      { "id": "n2", "text": "That is the One-Man Farm. A farm that keeps learning, built for the realities of smaller farms." }
+    ]}
+  ]
+}

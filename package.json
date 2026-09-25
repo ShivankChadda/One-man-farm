@@ -1,13 +1,18 @@
 {
   "name": "one-man-farm-video",
   "version": "1.0.0",
-  "description": "The One-Man Farm — a motion-graphics film for The Farmers of Great Nicobar, rendered with JavaScript, Playwright and ffmpeg.",
+  "description": "The One-Man Farm — films for The Farmers of Great Nicobar (pitch cut + animated explainer), rendered with JavaScript, Playwright and ffmpeg.",
   "scripts": {
     "audio": "node scripts/audio.js",
     "render": "node scripts/render.js",
     "build": "npm run audio && npm run render",
     "stills": "node scripts/stills.js",
-    "preview": "node scripts/serve.js"
+    "preview": "node scripts/serve.js",
+    "explainer:voice": "python3 scripts/voice.py",
+    "explainer:audio": "node scripts/explainer-audio.js",
+    "explainer:render": "node scripts/render.js --page explainer",
+    "explainer:build": "npm run explainer:voice && npm run explainer:audio && npm run explainer:render",
+    "frames": "node scripts/frames.js"
   },
   "repository": {
     "type": "git",

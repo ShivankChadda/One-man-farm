@@ -1,0 +1,272 @@
+{
+ "duration": 183.228,
+ "sampleRate": 24000,
+ "scenes": [
+  {
+   "id": "open",
+   "start": 0.0,
+   "end": 15.61,
+   "lines": [
+    {
+     "id": "o1",
+     "text": "This is a farm on Great Nicobar, the southernmost island of India.",
+     "start": 3.4,
+     "end": 7.375,
+     "src": "kokoro"
+    },
+    {
+     "id": "o2",
+     "text": "Like most farms, it runs on people. Planting, weeding, spraying, picking and carrying. Every day, by hand.",
+     "start": 7.795,
+     "end": 14.61,
+     "src": "kokoro"
+    }
+   ]
+  },
+  {
+   "id": "idea",
+   "start": 15.61,
+   "end": 30.801,
+   "lines": [
+    {
+     "id": "i1",
+     "text": "Our long-term vision is something we call the One-Man Farm.",
+     "start": 16.41,
+     "end": 19.667,
+     "src": "kokoro"
+    },
+    {
+     "id": "i2",
+     "text": "It doesn't mean one person does every job. It means that human physical labour largely disappears.",
+     "start": 20.087,
+     "end": 26.327,
+     "src": "kokoro"
+    },
+    {
+     "id": "i3",
+     "text": "A small team supervises. Machines do the work.",
+     "start": 26.747,
+     "end": 29.601,
+     "src": "kokoro"
+    }
+   ]
+  },
+  {
+   "id": "water",
+   "start": 30.801,
+   "end": 45.253,
+   "lines": [
+    {
+     "id": "w1",
+     "text": "Some of this is already within reach. Drip lines deliver water to every plant, and nutrients travel through the same pipes.",
+     "start": 31.601,
+     "end": 38.756,
+     "src": "kokoro"
+    },
+    {
+     "id": "w2",
+     "text": "With sensors, automated valves and software, irrigation can run almost on its own.",
+     "start": 39.176,
+     "end": 44.353,
+     "src": "kokoro"
+    }
+   ]
+  },
+  {
+   "id": "harvest",
+   "start": 45.253,
+   "end": 57.334,
+   "lines": [
+    {
+     "id": "h1",
+     "text": "Harvesting is much harder.",
+     "start": 46.053,
+     "end": 47.632,
+     "src": "kokoro"
+    },
+    {
+     "id": "h2",
+     "text": "A machine has to find a ripe vegetable inside dense leaves, reach it without damaging the plant, cut it cleanly, and handle it without bruising.",
+     "start": 48.052,
+     "end": 56.733,
+     "src": "kokoro"
+    }
+   ]
+  },
+  {
+   "id": "crops",
+   "start": 57.334,
+   "end": 63.518,
+   "lines": [
+    {
+     "id": "h3",
+     "text": "And cucumber, okra, chilli, bitter gourd and papaya may each need a different design.",
+     "start": 57.633,
+     "end": 62.518,
+     "src": "kokoro"
+    }
+   ]
+  },
+  {
+   "id": "spray",
+   "start": 63.518,
+   "end": 79.627,
+   "lines": [
+    {
+     "id": "s1",
+     "text": "Drones have made spraying easier. But on dense, trellised crops, pests hide under the leaves, where spray from above can't reach.",
+     "start": 64.318,
+     "end": 71.907,
+     "src": "kokoro"
+    },
+    {
+     "id": "s2",
+     "text": "So another machine moves beneath the canopy, spots the pests with a camera, and sprays only where it's needed.",
+     "start": 72.327,
+     "end": 78.627,
+     "src": "kokoro"
+    }
+   ]
+  },
+  {
+   "id": "eco",
+   "start": 79.627,
+   "end": 90.272,
+   "lines": [
+    {
+     "id": "e1",
+     "text": "Weeding, pruning, training vines, inspecting plants, moving produce. Not one giant machine, but an ecosystem of specialised ones.",
+     "start": 80.427,
+     "end": 89.072,
+     "src": "kokoro"
+    }
+   ]
+  },
+  {
+   "id": "small",
+   "start": 90.272,
+   "end": 110.88,
+   "lines": [
+    {
+     "id": "m1",
+     "text": "Most farm machinery was built for vast, flat fields.",
+     "start": 91.072,
+     "end": 94.201,
+     "src": "kokoro"
+    },
+    {
+     "id": "m2",
+     "text": "Farms here are three, five or ten acres. Irregular, hilly, with narrow tracks and trellises.",
+     "start": 94.621,
+     "end": 100.401,
+     "src": "kokoro"
+    },
+    {
+     "id": "m3",
+     "text": "So our machines must be small, light and modular. The question is simple: how do we bring industrial productivity to a five-acre farm?",
+     "start": 100.821,
+     "end": 109.48,
+     "src": "kokoro"
+    }
+   ]
+  },
+  {
+   "id": "data",
+   "start": 110.88,
+   "end": 128.426,
+   "lines": [
+    {
+     "id": "d1",
+     "text": "Every machine also collects data. The harvester measures every fruit. The sprayer maps every pest. The irrigation system logs every drop.",
+     "start": 111.68,
+     "end": 120.929,
+     "src": "kokoro"
+    },
+    {
+     "id": "d2",
+     "text": "Season after season, the farm builds a memory, linking what was done to the crop with what happened to it.",
+     "start": 121.349,
+     "end": 127.426,
+     "src": "kokoro"
+    }
+   ]
+  },
+  {
+   "id": "ai",
+   "start": 128.426,
+   "end": 138.783,
+   "lines": [
+    {
+     "id": "a1",
+     "text": "On top of that memory, AI can coordinate the whole farm: what is growing where, which plants are struggling, when to harvest, and what to do next.",
+     "start": 129.026,
+     "end": 137.683,
+     "src": "kokoro"
+    }
+   ]
+  },
+  {
+   "id": "seed",
+   "start": 138.783,
+   "end": 153.653,
+   "lines": [
+    {
+     "id": "g1",
+     "text": "That data could even shape the seed. Today, crop varieties are bred for broad regions.",
+     "start": 139.583,
+     "end": 145.03,
+     "src": "kokoro"
+    },
+    {
+     "id": "g2",
+     "text": "In future, a variety could be developed for one farm and its exact conditions, much like personalised medicine.",
+     "start": 145.45,
+     "end": 152.453,
+     "src": "kokoro"
+    }
+   ]
+  },
+  {
+   "id": "scale",
+   "start": 153.653,
+   "end": 165.783,
+   "lines": [
+    {
+     "id": "p1",
+     "text": "And if this works on small farms like ours, it can work on millions of others.",
+     "start": 154.453,
+     "end": 159.111,
+     "src": "kokoro"
+    },
+    {
+     "id": "p2",
+     "text": "Every labour problem becomes an engineering problem. Every solution becomes a product.",
+     "start": 159.531,
+     "end": 164.783,
+     "src": "kokoro"
+    }
+   ]
+  },
+  {
+   "id": "end",
+   "start": 165.783,
+   "end": 183.228,
+   "lines": [
+    {
+     "id": "n1",
+     "text": "Machines do the work. Sensors observe. Data remembers. AI coordinates.",
+     "start": 166.783,
+     "end": 171.624,
+     "src": "kokoro"
+    },
+    {
+     "id": "n2",
+     "text": "That is the One-Man Farm. A farm that keeps learning, built for the realities of smaller farms.",
+     "start": 172.044,
+     "end": 177.728,
+     "src": "kokoro"
+    }
+   ]
+  }
+ ]
+}
