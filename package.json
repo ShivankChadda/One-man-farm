@@ -1,0 +1,28 @@
+{
+  "name": "one-man-farm-video",
+  "version": "1.0.0",
+  "description": "The One-Man Farm — a motion-graphics film for The Farmers of Great Nicobar, rendered with JavaScript, Playwright and ffmpeg.",
+  "scripts": {
+    "audio": "node scripts/audio.js",
+    "render": "node scripts/render.js",
+    "build": "npm run audio && npm run render",
+    "stills": "node scripts/stills.js",
+    "preview": "node scripts/serve.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShivankChadda/One-man-farm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShivankChadda/One-man-farm/issues"
+  },
+  "homepage": "https://github.com/ShivankChadda/One-man-farm#readme",
+  "devDependencies": {
+    "@fontsource/instrument-serif": "^5.3.0",
+    "@fontsource/inter-tight": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "playwright": "^1.56.1"
+  },
+  "type": "module",
+  "private": true
+}

@@ -1,0 +1,114 @@
+@font-face { font-family: 'Inter Tight'; font-weight: 400; src: url('../node_modules/@fontsource/inter-tight/files/inter-tight-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Inter Tight'; font-weight: 500; src: url('../node_modules/@fontsource/inter-tight/files/inter-tight-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Inter Tight'; font-weight: 600; src: url('../node_modules/@fontsource/inter-tight/files/inter-tight-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Inter Tight'; font-weight: 700; src: url('../node_modules/@fontsource/inter-tight/files/inter-tight-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Inter Tight'; font-weight: 800; src: url('../node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Inter Tight'; font-weight: 900; src: url('../node_modules/@fontsource/inter-tight/files/inter-tight-latin-900-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; src: url('../node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; src: url('../node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 400; src: url('../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 500; src: url('../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 700; src: url('../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-700-normal.woff2') format('woff2'); }
+
+:root {
+  --bg: #06110c;
+  --bg2: #0b1a13;
+  --ink: #f3efe3;
+  --dim: rgba(243, 239, 227, 0.5);
+  --faint: rgba(243, 239, 227, 0.12);
+  --line: rgba(243, 239, 227, 0.07);
+  --lime: #c8ff4d;
+  --teal: #3de0c0;
+  --coral: #ff6a4d;
+  --leaf: #1d5a3a;
+  --leaf2: #2c7a4e;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #000; overflow: hidden; }
+
+#stage {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter Tight', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+#camera, #scenes, .scene, .layer { position: absolute; inset: 0; }
+#camera { transform-origin: 50% 50%; }
+
+.abs { position: absolute; }
+.mono { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.14em; }
+.serif { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+.acc { color: var(--lime); }
+.dim { color: var(--dim); }
+.coral { color: var(--coral); }
+.teal { color: var(--teal); }
+
+.hl { font-weight: 800; letter-spacing: -0.04em; line-height: 0.95; }
+.hl .serif { letter-spacing: -0.02em; }
+.xl { font-size: 200px; }
+.l { font-size: 128px; }
+.m { font-size: 96px; }
+.ms { font-size: 76px; }
+.s { font-size: 56px; }
+.body { font-size: 34px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2; }
+
+.words { white-space: nowrap; }
+.words .w { display: inline-block; overflow: hidden; vertical-align: top; padding: 0.04em 0.03em 0.12em; margin: -0.04em -0.03em -0.12em; }
+.words .wi { display: inline-block; will-change: transform; }
+.serif.words .w, .words .serif { padding-right: 0.06em; }
+
+.tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--lime);
+  display: flex; align-items: center; gap: 14px; white-space: nowrap;
+}
+.tag::before { content: ''; width: 10px; height: 10px; background: currentColor; display: inline-block; }
+.tag.coral { color: var(--coral); }
+.tag.plain::before { display: none; }
+
+.chip {
+  font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap;
+  padding: 8px 14px; border: 1.5px solid var(--faint); color: var(--ink);
+  background: rgba(6, 17, 12, 0.85); display: inline-flex; align-items: center; gap: 10px;
+}
+.chip.lime { border-color: var(--lime); color: var(--lime); }
+.chip.coral { border-color: var(--coral); color: var(--coral); }
+.chip.solid { background: var(--lime); color: var(--bg); border-color: var(--lime); font-weight: 700; }
+.chip.solid-coral { background: var(--coral); color: var(--bg); border-color: var(--coral); font-weight: 700; }
+
+.card {
+  border: 1.5px solid var(--faint); background: rgba(243, 239, 227, 0.025);
+  padding: 28px 30px;
+}
+
+.ico { display: inline-block; vertical-align: middle; overflow: visible; }
+svg { overflow: visible; }
+
+/* global layers */
+#grid {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 120px 120px;
+  background-position: -1px -1px;
+}
+#glow { background: radial-gradient(900px 600px at 50% 50%, rgba(200, 255, 77, 0.06), transparent 70%); }
+#flash { background: var(--lime); opacity: 0; mix-blend-mode: normal; }
+#grain { opacity: 0.022; mix-blend-mode: screen; background-repeat: repeat; }
+#vignette { background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.55) 100%); }
+#black { background: #000; opacity: 0; }
+
+/* HUD */
+#hud { font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); }
+#hud .corner { position: absolute; width: 22px; height: 22px; border-color: rgba(243, 239, 227, 0.35); border-style: solid; border-width: 0; }
+#hud .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); }
+#hud .rec { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--coral); margin-right: 10px; }
+#hud .bar { position: absolute; left: 60px; right: 60px; bottom: 34px; height: 2px; background: var(--faint); }
+#hud .bar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--lime); }
