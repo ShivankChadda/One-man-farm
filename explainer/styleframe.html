@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>One-Man Farm · style frame</title>
+  <style>
+    @font-face { font-family: 'Inter Tight'; font-weight: 500; src: url('../node_modules/@fontsource/inter-tight/files/inter-tight-latin-500-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter Tight'; font-weight: 600; src: url('../node_modules/@fontsource/inter-tight/files/inter-tight-latin-600-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter Tight'; font-weight: 700; src: url('../node_modules/@fontsource/inter-tight/files/inter-tight-latin-700-normal.woff2') format('woff2'); }
+    html, body { margin: 0; background: #000; }
+    #stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; font-family: 'Inter Tight', sans-serif; }
+    svg { display: block; position: absolute; left: 0; top: 0; }
+    .label {
+      position: absolute; display: flex; align-items: center; gap: 12px;
+      padding: 11px 20px 11px 16px; border-radius: 999px; background: rgba(255, 252, 244, 0.94);
+      color: #1f2b25; font-weight: 600; font-size: 23px; letter-spacing: -0.01em;
+      box-shadow: 0 6px 24px rgba(60, 40, 20, 0.18); white-space: nowrap;
+    }
+    .label i { width: 12px; height: 12px; border-radius: 50%; background: #9fd400; box-shadow: 0 0 0 4px rgba(159, 212, 0, 0.25); }
+    .caption {
+      position: absolute; left: 0; right: 0; bottom: 64px; text-align: center;
+      font-weight: 600; font-size: 40px; letter-spacing: -0.015em; color: #fffaf0;
+      text-shadow: 0 2px 18px rgba(40, 25, 10, 0.55), 0 1px 3px rgba(40, 25, 10, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div id="stage">
+    <svg id="art" width="1920" height="1080" viewBox="0 0 1920 1080"></svg>
+    <div class="label" style="left: 1300px; top: 484px;"><i></i>Harvesting robot</div>
+    <div class="label" style="left: 1010px; top: 176px;"><i></i>Spraying drone</div>
+    <div class="caption">Machines do the work. People oversee the farm.</div>
+  </div>
+  <script type="module" src="styleframe.js"></script>
+</body>
+</html>
